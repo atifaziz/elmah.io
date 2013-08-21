@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace Elmah.Io
 {
@@ -7,8 +8,8 @@ namespace Elmah.Io
     {
         WebHeaderCollection Headers { get; set; }
 
-        string Post(Uri address, string data);
+        Task<string> Post(Uri address, string data);
 
-        string Get(Uri address);
+        Task<string> Get(Uri address);
     }
 }
